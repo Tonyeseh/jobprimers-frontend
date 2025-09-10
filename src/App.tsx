@@ -70,7 +70,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <div className="bg-blue-600 p-2 rounded-lg mr-3">
+              <div className="bg-[#2c54fc] p-2 rounded-lg mr-3">
                 <Briefcase className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900">JobBoard Pro</h1>
@@ -96,15 +96,15 @@ function App() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">{mockJobs.length}+</div>
+              <div className="text-3xl font-bold text-[#2c54fc]">{mockJobs.length}+</div>
               <div className="text-gray-600">Active Jobs</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">{mockCompanies.length}+</div>
+              <div className="text-3xl font-bold text-[#2c54fc]">{mockCompanies.length}+</div>
               <div className="text-gray-600">Companies</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">50k+</div>
+              <div className="text-3xl font-bold text-[#2c54fc]">50k+</div>
               <div className="text-gray-600">Job Seekers</div>
             </div>
           </div>
@@ -118,7 +118,7 @@ function App() {
           <h3 className="text-xl font-semibold text-gray-900">
             {filteredJobs.length} Job{filteredJobs.length !== 1 ? 's' : ''} Found
           </h3>
-          <select className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          <select className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c54fc] focus:border-transparent">
             <option>Most Recent</option>
             <option>Most Relevant</option>
             <option>Salary: High to Low</option>
@@ -156,7 +156,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <div className="bg-blue-600 p-2 rounded-lg mr-3">
+                <div className="bg-[#2c54fc] p-2 rounded-lg mr-3">
                   <Briefcase className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold">JobBoard Pro</h3>

@@ -23,7 +23,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ filters, onFiltersChange }
             placeholder="Job title, keywords..."
             value={filters.query}
             onChange={(e) => updateFilter('query', e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c54fc] focus:border-transparent transition-colors"
           />
         </div>
 
@@ -35,7 +35,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ filters, onFiltersChange }
             placeholder="Location"
             value={filters.location}
             onChange={(e) => updateFilter('location', e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c54fc] focus:border-transparent transition-colors"
           />
         </div>
 
@@ -45,7 +45,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ filters, onFiltersChange }
           <select
             value={filters.employment_type}
             onChange={(e) => updateFilter('employment_type', e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors appearance-none bg-white"
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c54fc] focus:border-transparent transition-colors appearance-none bg-white"
           >
             <option value="">All Types</option>
             <option value="full-time">Full Time</option>
@@ -60,7 +60,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ filters, onFiltersChange }
           <select
             value={filters.experience_level}
             onChange={(e) => updateFilter('experience_level', e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors appearance-none bg-white"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c54fc] focus:border-transparent transition-colors appearance-none bg-white"
           >
             <option value="">All Levels</option>
             <option value="entry">Entry Level</option>
@@ -78,7 +78,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ filters, onFiltersChange }
             type="checkbox"
             checked={filters.remote_option}
             onChange={(e) => updateFilter('remote_option', e.target.checked)}
-            className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+            className="w-4 h-4 text-[#2c54fc] border-gray-300 rounded focus:ring-[#2c54fc]"
           />
           <span className="ml-2 text-gray-700">Remote positions only</span>
         </label>
