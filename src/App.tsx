@@ -3,6 +3,7 @@ import { SearchBar } from './components/SearchBar';
 import { JobList } from './components/JobList';
 import { JobDetails } from './components/JobDetails';
 import { CompanyProfile } from './components/CompanyProfile';
+import { ATSDashboard } from './components/ats/ATSDashboard';
 import { Job, Company, SearchFilters } from './types';
 import { mockJobs, mockCompanies } from './data/mockData';
 import { Briefcase } from 'lucide-react';
@@ -20,6 +21,7 @@ function App() {
   const [selectedCompanyId, setSelectedCompanyId] = useState<number | null>(null);
   const [isJobDetailsOpen, setIsJobDetailsOpen] = useState(false);
   const [isCompanyProfileOpen, setIsCompanyProfileOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<'jobs' | 'ats'>('jobs');
 
   // Filter jobs based on search criteria
   const filteredJobs = useMemo(() => {
@@ -63,6 +65,10 @@ function App() {
     ? mockJobs.filter(job => job.company.id === selectedCompanyId)
     : [];
 
+  if (currentView === 'ats') {
+    return <ATSDashboard />;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -76,8 +82,18 @@ function App() {
               <h1 className="text-2xl font-bold text-gray-900">JobBoard Pro</h1>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Jobs</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Companies</a>
+              <button 
+                onClick={() => setCurrentView('jobs')}
+                className={`transition-colors ${currentView === 'jobs' ? 'text-[#2c54fc] font-medium' : 'text-gray-600 hover:text-gray-900'}`}
+              >
+                Jobs
+              </button>
+              <button 
+                onClick={() => setCurrentView('ats')}
+                className={`transition-colors ${currentView === 'ats' ? 'text-[#2c54fc] font-medium' : 'text-gray-600 hover:text-gray-900'}`}
+              >
+                ATS Dashboard
+              </button>
               <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Post a Job</a>
             </nav>
           </div>
