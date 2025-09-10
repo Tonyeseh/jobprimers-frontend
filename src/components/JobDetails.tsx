@@ -30,7 +30,7 @@ export const JobDetails: React.FC<JobDetailsProps> = ({ job, isOpen, onClose, on
               <h1 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h1>
               <button
                 onClick={() => onCompanyClick(job.company.id)}
-                className="text-blue-600 hover:text-blue-700 font-medium text-lg transition-colors"
+                className="text-[#2c54fc] hover:text-[#1e3a8a] font-medium text-lg transition-colors"
               >
                 {job.company.name}
               </button>
@@ -108,7 +108,7 @@ export const JobDetails: React.FC<JobDetailsProps> = ({ job, isOpen, onClose, on
             <ul className="space-y-2">
               {job.requirements.map((req, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#2c54fc] rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span className="text-gray-700">{req}</span>
                 </li>
               ))}
@@ -124,7 +124,7 @@ export const JobDetails: React.FC<JobDetailsProps> = ({ job, isOpen, onClose, on
                   href={job.company.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                  className="flex items-center text-[#2c54fc] hover:text-[#1e3a8a] transition-colors"
                 >
                   <ExternalLink className="w-4 h-4 mr-1" />
                   Website
@@ -152,7 +152,7 @@ export const JobDetails: React.FC<JobDetailsProps> = ({ job, isOpen, onClose, on
 
           {/* Apply Button */}
           <div className="flex gap-4">
-            <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            <button className="flex-1 bg-[#2c54fc] text-white py-3 px-6 rounded-lg hover:bg-[#1e3a8a] transition-colors font-medium">
               Apply Now
             </button>
             <button 
@@ -160,6 +160,9 @@ export const JobDetails: React.FC<JobDetailsProps> = ({ job, isOpen, onClose, on
               className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
             >
               View Company
+            </button>
+            <button className="px-6 py-3 bg-[#fc9324] text-white rounded-lg hover:bg-[#e8851f] transition-colors font-medium">
+              Save Job
             </button>
           </div>
         </div>

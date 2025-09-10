@@ -84,7 +84,7 @@ export const CompanyProfile: React.FC<CompanyProfileProps> = ({
                 href={company.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center mt-4 text-blue-600 hover:text-blue-700 transition-colors font-medium"
+                className="inline-flex items-center mt-4 text-[#2c54fc] hover:text-[#1e3a8a] transition-colors font-medium"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Visit Website
